@@ -1,4 +1,4 @@
-// const prompt = require("prompt-sync")();
+const prompt = require("prompt-sync")();
 
 // let n = parseInt(prompt("Enter n:- "));
 
@@ -113,23 +113,22 @@
 // }
 
 let random = Math.floor(Math.random()*100+1);
+
 let guess = -1;
 
 while(guess !== random) {
-    // guess = parseInt(prompt("Enter a num:- ")) 
+    guess = parseInt(prompt("Enter a num:- ")) 
     if(isNaN(guess) || guess < 1 || guess > 100) {
         console.log(`Please enter a valid number between 1 to 100`);
         continue;
     }
     if(guess > random) {
-        console.log(`Number is too low, try again`);
+        console.log(`Number is too larger, try again`);
     }
     else if(guess < random) {
-        console.log(`Number is too larger, try again`);
+        console.log(`Number is too low, try again`);
     }
     else {
         console.log(`Congratulations, You have won`);
     }
 }
-
-console.log(random);
