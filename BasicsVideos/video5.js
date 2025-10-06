@@ -1,4 +1,6 @@
-let prompt = require('prompt-sync')()
+
+
+// let prompt = require('prompt-sync')()
 
 // let NewArr = []
 // let sum = 0

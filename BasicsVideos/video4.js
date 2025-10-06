@@ -3,7 +3,7 @@
 
 let prompt = require('prompt-sync')()
 
-let n = parseInt(prompt("Enter a num:- "));
+// let n = parseInt(prompt("Enter a num:- "));
 
 // for(let i = 0; i < n; i++) {
 //     process.stdout.write("*")
@@ -74,6 +74,15 @@ let n = parseInt(prompt("Enter a num:- "));
 //         else {
 //             process.stdout.write(" ")
 //         }
+//     }
+//     console.log();
+// }
+
+// let n = parseInt(prompt("Enter a num:- "));
+
+// for(let i=0; i<n; i++) {
+//     for(let j=0; j<n; j++) {
+//         process.stdout.write(" * ")
 //     }
 //     console.log();
 // }
