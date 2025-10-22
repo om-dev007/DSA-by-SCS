@@ -40,21 +40,28 @@
 //     arr[j] = arr[j+1]
 // }
 
-let prompt = require("prompt-sync")()
-
 let arr = [1, 2, 3, 4, 5];
 
-let k = parseInt(prompt("Enter k:- "))
+let k = 5
 k = k % arr.length
 let count = 0;
-for(let i=1; i<=k; i++) {
-    count++
-    let first = arr[0]
-    for(let j=0; j<arr.length; j++) {
-        arr[j] = arr[j+1]
-    }
+// for(let i=1; i<=k; i++) {
+//     count++
+//     let first = arr[0]
+//     for(let j=0; j<arr.length; j++) {
+//         arr[j] = arr[j+1]
+//     }
 
-    arr[arr.length-1] = first
+//     arr[arr.length-1] = first
+// }
+
+for(let i=1; i<=k; i++) {
+    let lastElement = arr[arr.length-1];
+    for(let j=arr.length-1; j>0; j--) {
+        arr[j] = arr[j-1]
+    }
+    arr[0] = lastElement
 }
 
 console.log(arr);
+
