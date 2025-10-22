@@ -25,17 +25,36 @@
 
 // console.log(`New array is ${arr}`)
 
-let prompt = require('prompt-sync')()
+// let prompt = require('prompt-sync')()
 
-let arr = [1,2,3,4,5];
-let copy = arr[0]
-let k = parseInt(prompt("Enter k:- "));
+// let arr = [1,2,3,4,5];
+// let copy = arr[0]
+// let k = parseInt(prompt("Enter k:- "));
 
-for(let i=0; i<=k; i++) {
-    arr[i] = arr[i+1]
+// for(let i=0; i<=k; i++) {
+//     arr[i] = arr[i+1]
+// }
+
+
+// for(let j=0; j<=arr.length-1; j++) {
+//     arr[j] = arr[j+1]
+// }
+
+let prompt = require("prompt-sync")()
+
+let arr = [1, 2, 3, 4, 5];
+
+let k = parseInt(prompt("Enter k:- "))
+k = k % arr.length
+let count = 0;
+for(let i=1; i<=k; i++) {
+    count++
+    let first = arr[0]
+    for(let j=0; j<arr.length; j++) {
+        arr[j] = arr[j+1]
+    }
+
+    arr[arr.length-1] = first
 }
 
-
-for(let j=0; j<=arr.length-1; j++) {
-    arr[j] = arr[j+1]
-}
+console.log(arr);
