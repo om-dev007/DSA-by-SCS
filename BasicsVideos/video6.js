@@ -64,4 +64,3 @@ for(let i=1; i<=k; i++) {
 }
 
 console.log(arr);
-
