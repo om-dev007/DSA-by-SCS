@@ -40,11 +40,11 @@
 //     arr[j] = arr[j+1]
 // }
 
-let arr = [1, 2, 3, 4, 5];
+// let arr = [1, 2, 3, 4, 5];
 
-let k = 5
-k = k % arr.length
-let count = 0;
+// let k = 5
+// k = k % arr.length
+// let count = 0;
 // for(let i=1; i<=k; i++) {
 //     count++
 //     let first = arr[0]
@@ -55,12 +55,26 @@ let count = 0;
 //     arr[arr.length-1] = first
 // }
 
-for(let i=1; i<=k; i++) {
-    let lastElement = arr[arr.length-1];
-    for(let j=arr.length-1; j>0; j--) {
-        arr[j] = arr[j-1]
-    }
-    arr[0] = lastElement
+// for(let i=1; i<=k; i++) {
+//     let lastElement = arr[arr.length-1];
+//     for(let j=arr.length-1; j>0; j--) {
+//         arr[j] = arr[j-1]
+//     }
+//     arr[0] = lastElement
+// }
+
+// console.log(arr);
+
+
+let arr = [10, 34, 53, 7345, 123];
+
+let temp = new Array(arr.length)
+
+let k = 3;
+
+for(let i=0; i<arr.length; i++) {
+    temp[i] = arr[(i+k)%arr.length];
 }
 
-console.log(arr);
+console.log(temp);
+
